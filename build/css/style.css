@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+:root{
+    --dark-primary:#303F9F;
+    --primary:#3F51B5;
+    --accent:#FF4081;
+    --primary-text:#212121;
+    --secondary-text:#757575;
+    --divider:#BDBDBD;
+}
+body{
+    margin:0px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+.hide-desktop{
+    display: none;
+}
+#ham{
+    display: none;
+}
+@media (max-width:600px){
+    .show-mobile{
+        display: inline;
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding: .5rem;
+        background-color: var(--dark-primary);
+    }
+    .ham_button{
+        width: 20px;
+        height: 2.3px;
+        background-color: white;
+        border-radius: 8px;
+        margin-top: 11px;
+        transition: all .5s ease-in-out;
+    }
+    .ham_button::before,
+    .ham_button::after{
+        content: '';
+        position:absolute;
+        width: 20px;
+        height: 2.3px;
+        background-color: white;
+        border-radius: 8px;
+        transition: all .5s ease-in-out;
+    }
+    .ham_button::before{
+        transform:translateY(-7px);
+    }
+    .ham_button::after{
+        transform:translateY(7px);
+    }
+    .navbar{
+        position: fixed;
+        margin:0px;
+        padding:0px;
+        width: 90%;
+        height:100vh;
+        left:-100%;
+        list-style-type: none;
+        background-color: var(--primary);
+        text-align: center;
+        transition:all .5s ease-in-out;
+    }
+    .nav-item{
+        display: block;
+        padding:25px;
+        line-height: 30px;
+    }
+    .nav-item:hover{
+        background-color: var(--dark-primary);
+    }
+    .nav-link{
+        color:white;
+        text-decoration: none;
+    }
+    .profile{
+        display: flex;
+        justify-content: space-between;
+        background: url("../images/background.jpg");
+        background-size: cover;
+        align-items: center;
+        padding: 1.5rem;
+    }
+    .profile img{
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .profile-name{
+        text-align: start;
+        line-height: 10px;
+    }
+    #ham:checked ~ ul{
+        left:0;
+    }
+    #ham:checked ~ .navigation div label .ham_button{
+        transform: translateX(50px);
+        background-color: transparent;
+        
+    }
+    #ham:checked ~ .navigation div label .ham_button::before{
+        transform: rotate(45deg) translate(-35px,35px);
+    }
+    #ham:checked ~ .navigation div label .ham_button::after{
+        transform: rotate(-45deg) translate(-35px,-35px);
+    }
+}
