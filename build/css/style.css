@@ -26,12 +26,12 @@ body{
         display: flex;
         justify-content: space-between;
         align-self: center;
-        padding: .5rem;
+        padding: 20px;
         background-color: var(--dark-primary);
     }
     .ham_button{
-        width: 20px;
-        height: 2.3px;
+        width: 23px;
+        height: 3px;
         background-color: white;
         border-radius: 8px;
         margin-top: 11px;
@@ -41,17 +41,17 @@ body{
     .ham_button::after{
         content: '';
         position:absolute;
-        width: 20px;
-        height: 2.3px;
+        width: 23px;
+        height: 3px;
         background-color: white;
         border-radius: 8px;
         transition: all .5s ease-in-out;
     }
     .ham_button::before{
-        transform:translateY(-7px);
+        transform:translateY(-10px);
     }
     .ham_button::after{
-        transform:translateY(7px);
+        transform:translateY(10px);
     }
     .navbar{
         position: fixed;
