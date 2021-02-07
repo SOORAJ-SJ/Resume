@@ -10,7 +10,7 @@
 body{
     margin:0px;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
+    color: var(--primary-text);
 }
 .hide-desktop{
     display: none;
@@ -81,6 +81,7 @@ body{
         display: flex;
         justify-content: space-between;
         background: url("../images/background.jpg");
+        color:white;
         background-size: cover;
         align-items: center;
         padding: 1.5rem;
@@ -108,5 +109,9 @@ body{
     }
     #ham:checked ~ .navigation div label .ham_button::after{
         transform: rotate(-45deg) translate(-35px,-35px);
+    }
+    .container{
+        text-align: center;
+        padding:2em 3em;
     }
 }
