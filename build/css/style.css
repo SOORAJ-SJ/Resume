@@ -7,10 +7,15 @@
     --secondary-text:#757575;
     --divider:#BDBDBD;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin:0px;
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-text);
+    background-color: #ececec;
+    font-size: 1em;
 }
 .hide-desktop{
     display: none;
@@ -18,12 +23,67 @@ body{
 #ham{
     display: none;
 }
+.container h2{
+    margin-bottom: 1px;
+}
+hr{
+    width:35%;
+}
+.head-dec{
+    height:3px;
+    width: 40px;
+    border-radius:35px;
+    background-color: black;
+    display: inline-block;
+}
+.divider{
+    width: 100%;
+    height:2px;
+    background-color: var(--divider);
+}
+.exp{
+    margin-top: 25px;;
+    padding:15px;
+    border-radius: 25px;
+    border-top: #ececec;
+    box-shadow: 10px 10px 15px rgba(70,70,70,.12),-10px -10px 15px rgba(255,255,255,.6);
+}
+.education ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.education .card{
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(70,70,70,.12),-10px -10px 15px rgba(255,255,255,.6);
+}
+.education .card h3{
+    margin-top: 0px;
+}
+.card .header{
+    height:64px;
+    color:white;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0px 0px;
+    background-color: var(--dark-primary);
+}
+.card .card-body{
+    text-align: left;
+    padding-left: 20px;
+}
 @media (max-width:600px){
     .show-mobile{
         display: inline;
     }
     .navigation{
         display: flex;
+        position:fixed;
+        top:0;
+        width: 100%;
         justify-content: space-between;
         align-self: center;
         padding: 20px;
@@ -57,6 +117,7 @@ body{
         position: fixed;
         margin:0px;
         padding:0px;
+        top:70px;
         width: 90%;
         height:100vh;
         left:-100%;
@@ -67,11 +128,12 @@ body{
     }
     .nav-item{
         display: block;
-        padding:25px;
+        padding:15px;
         line-height: 30px;
     }
     .nav-item:hover{
         background-color: var(--dark-primary);
+        transition: all .5s ease-in-out;
     }
     .nav-link{
         color:white;
@@ -113,5 +175,132 @@ body{
     .container{
         text-align: center;
         padding:2em 3em;
+        transition: all .5s ease-in-out;
+    }
+    .main{
+        margin-top: 70px;
+        color:white;
+        background-color: #242424;
+        line-height: 45px;
+        
+    }
+    .main h1{
+        text-align: center;
+    }
+    .main a{
+        color: white;
+        text-decoration: none;
+        border-top: #363636;
+        border-left: #363636;
+        box-shadow: 6px 6px 10px #1a1a1a,-4px -3px 10px #363636;
+        padding:8px;
+        border-radius: 8px;
+    }
+    .main a:hover{
+        box-shadow:6px 6px 10px #1a1a1a,-4px -3px 10px #363636, inset 6px 6px 10px #1a1a1a,inset -4px -3px 10px #363636;
+        color:var(--primary);
+        transition: all .5s ease-in-out;
+    }
+    .scroll{
+        height:50px;
+        margin-top: 25px;
+    }
+    .scroll svg{
+        animation-name: scroll;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .education ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .education .card{
+        height: 225px;
+        margin: 25px auto; 
+    }
+    .education .percentage{
+        margin-right: 5px;
+        border-top: 1px solid #ececec;
+        background-color: lightgray;
+        box-shadow: 2px 2px 8px rgba(70,70,70,.3),-2px -2px 8px rgba(255,255,255,.8),inset 2px 2px 5px rgba(70,70,70,.15);
+        height: 8px;
+        width:70%;
+        display: inline-block;
+        border-radius: 20px;
+        padding:2px;
+    }
+    .education .percentage .sslc{
+        width: 87%;
+        height:100%;
+        border-radius: 20px;
+        background-image: linear-gradient(to left, #3fb587, #7aab53, #ac992d, #d87f32, #f65d5d);
+    }
+    .education .percentage .plustwo{
+        width: 76%;
+        height:100%;
+        border-radius: 20px;
+        background-image: linear-gradient(to left, #82b53f, #aca41f, #cf8f1e, #e9763a, #f65d5d);
+    }
+    .education .percentage .bca{
+        width: 74%;
+        height:100%;
+        border-radius: 20px;
+        background-image: linear-gradient(to left, #82b53f, #aca41f, #cf8f1e, #e9763a, #f65d5d);
+    }
+    .skills h2{
+        margin: 85px auto 1px auto;
+        text-align: center;
+    }
+    .skills .container div{
+        border-radius: 15px 0px 15px 0px;
+        padding:15px;
+        margin:30px auto;
+        box-shadow: 10px 10px 15px rgba(70,70,70,.12),-10px -10px 15px rgba(255,255,255,.6);
+    }
+    .scrollable{
+        margin-top: 35px;
+        padding:25px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .scrollable div{
+        border-radius: 15px;
+        margin:auto 15px auto auto;
+        display: inline-block;
+    }
+    .collegeweb{
+        height: 250px;
+        width:250px;
+        background:url('../images/college.jpg');
+        background-color: rgba(0,0,0,.6);
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    .qi{
+        height: 250px;
+        width:250px;
+        background:url('../images/qi.JPG');
+        background-color: rgba(0,0,0,.6);
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    .scrollable .project-det{
+        color:white;
+        margin: 50%;
+        transform:translate(-50%,-50%)
+    }
+    @keyframes scroll{
+        0%{
+            margin-top:0%;
+        }
+        50%{
+            margin-top:10%;
+        }
+        100%{
+            margin-top:0;
+        }
     }
 }
+
