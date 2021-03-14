@@ -283,6 +283,10 @@ hr{
     background-color: var(--divider);
 }
 @media only screen and (min-width:650px){
+    .container{
+        width:60%;
+        margin:auto;
+    }
     .hide-desktop{
         display: none;
     }
@@ -317,10 +321,17 @@ hr{
     }
     .education ul{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     }
     .education .card{
-        margin:65px 50px; 
+        margin:25px 25px; 
+    }
+    .skills .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    }
+    .skills .container div{
+        margin:25px;
     }
     @keyframes scroll{
         0%{
