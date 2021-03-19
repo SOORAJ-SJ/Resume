@@ -2,7 +2,6 @@
     "name":"Resume Sooraj",
     "short_name":"Resume",
     "start_url": "https://github.com/SOORAJ-SJ/Resume/edit/master/build/manifest.json",
-    "scope":".",
     "icons":[
         {
             "src": "icons/manifest-icon-192.png",
