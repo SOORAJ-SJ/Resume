@@ -1,7 +1,6 @@
 self.addEventListener('install',(event)=>{
     event.waitUntil(
-        caches.open('v1').then((cache)=>{
-            return cache.addAll([
+        caches.open('v1').then((cache)=>cache.addAll([
                 '/Resume/build/',
                 '/Resume/build/index.html',
                 '/Resume/build/css/style.css',
@@ -13,7 +12,7 @@ self.addEventListener('install',(event)=>{
                 '/Resume/build/images/sj.png',
                 '/Resume/build/images/sjfavicon.ico',
             ]);
-        })
+        )
     );
 });
 self.addEventListener('fetch',(event)=>{
