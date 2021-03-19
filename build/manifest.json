@@ -1,7 +1,7 @@
 {
     "name":"Resume Sooraj",
     "short_name":"Resume",
-    "start_url": "https://github.com/SOORAJ-SJ/Resume/build/",
+    "start_url": "https://www.github.com/SOORAJ-SJ/Resume/build/",
     "icons":[
         {
             "src": "icons/manifest-icon-192.png",
