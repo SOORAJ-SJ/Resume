@@ -251,7 +251,7 @@ body{
 .collegeweb{
     height: 250px;
     width:250px;
-    background:url('Resume/build/images/college.jpg');
+    background:url('./images/college.JPG');
     background-color: rgba(0,0,0,.6);
     background-size: cover;
     background-blend-mode: darken;
@@ -259,7 +259,7 @@ body{
 .qi{
     height: 250px;
     width:250px;
-    background:url('Resume/build/images/qi.jpg');
+    background:url('./images/qi.JPG');
     background-color: rgba(0,0,0,.6);
     background-size: cover;
     background-blend-mode: darken;
