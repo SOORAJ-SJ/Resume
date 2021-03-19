@@ -1,7 +1,7 @@
 {
     "name":"Resume Sooraj",
     "short_name":"Resume",
-    "start_url": "/Resume/build/index.html",
+    "start_url": "/Resume/build/",
     "icons":[
         {
             "src": "icons/manifest-icon-192.png",
