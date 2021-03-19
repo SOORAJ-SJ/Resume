@@ -2,16 +2,16 @@ self.addEventListener('install',(event)=>{
     event.waitUntil(
         caches.open('v1').then((cache)=>{
             return cache.addAll([
-                './',
-                './index.html',
-                './css/style.css',
-                './js/script.js',
-                './images/B4483.jpg',
-                './images/background.jpg',
-                './images/college.jpg',
-                './images/qi.jpg',
-                './images/sj.png',
-                './images/sjfavicon.ico',
+                '/Resume/build/',
+                '/Resume/build/index.html',
+                '/Resume/build/css/style.css',
+                '/Resume/build/js/script.js',
+                '/Resume/build/images/B4483.jpg',
+                '/Resume/build/images/background.jpg',
+                '/Resume/build/images/college.jpg',
+                '/Resume/build/images/qi.jpg',
+                '/Resume/build/images/sj.png',
+                '/Resume/build/images/sjfavicon.ico',
             ]);
         })
     );
