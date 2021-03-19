@@ -1,0 +1,23 @@
+self.addEventListener('install',(event)=>{
+    event.waitUntil(
+        caches.open('v1').then((cache)=>{
+            return cache.addAll([
+                './',
+                './index.html',
+                './css/style.css',
+                './js/script.js',
+                './images/B4483.jpg',
+                './images/background.jpg',
+                './images/college.jpg',
+                './images/qi.jpg',
+                './images/sj.png',
+                './images/sjfavicon.ico',
+            ]);
+        })
+    );
+});
+self.addEventListener('fetch',(event)=>{
+    event.respondWith(
+        caches.match(event.request)
+    );
+});
