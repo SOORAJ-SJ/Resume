@@ -203,7 +203,8 @@
     <script src="js/script.js"></script>
     <script>
         if('serviceWorker' in navigator){
-            navigator.serviceWorker.register('/Resume/build/sw.js');
+            navigator.serviceWorker.register('/Resume/build/sw.js')
+            .then(()=>{console.log("service worker registered");});
         }
     </script>
 </body>
