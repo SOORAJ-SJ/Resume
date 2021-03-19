@@ -12,7 +12,7 @@ self.addEventListener('install',(event)=>{
                 '/Resume/build/images/sj.png',
                 '/Resume/build/images/sjfavicon.ico',
             ]);
-        )
+        );
     );
 });
 self.addEventListener('fetch',(event)=>{
